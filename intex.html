@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: "Lato", sans-serif; background-color: pink;}
+        header {background-color: #ffbebe; color: white; padding:0; font-family: "lato", sans-serif; text-align: center;}
+        .tablink {
+          background-color: #ffbebe;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 17px;
+          width: 25%;
+        }
+        
+        .tablink:hover {
+          background-color: #ffa7a7;
+        }
+        
+        .tabcontent {
+          color: white;
+          display: none;
+          padding: 50px;
+          text-align: center;
+        }
+        
+        #About  {background-color:pink;}
+        #My  {background-color:pink;}
+        #Photos {background-color:pink;}
+        #Other {background-color:pink;}
+        </style>
+        </head>
+        <header>
+            <h1>Maddie's Website</h1>
+        </header>
+        <body>
+        
+        <button class="tablink" onclick="openTab('About', this, 'pink')" id="defaultOpen">About Me</button>
+        <button class="tablink" onclick="openTab('My', this, 'pink')">My Socials</button>
+        <button class="tablink" onclick="openTab('Photos', this, 'pink')">Photos</button>
+        <button class="tablink" onclick="openTab('Other', this, 'pink')">Other Projects</button>
+        
+        <div id="About" class="tabcontent">
+          <h1>About Me</h1>
+          <p>Hey, I'm Maddie! I am a high school student. I love to dance, cheer, and code! For a career I want to do computer engineering/ comp sci! I also love animals.</p>
+          <p> I am also a BigFuture ambassador! Use my <a href="http://share.bigfuture.org/6FLQHm">referral link</a> and possibly win scholarships by doing tasks on your dashboard!</p>
+          <p>I hope you enjoy my own little personal website! Feel free to DM me on any of my socials I listed with feedback for the site!</p>
+        </div>
+        
+        <div id="My" class="tabcontent">
+          <h1>My Socials</h1>
+          <p>TikTok: <a href="https://www.tiktok.com/@maddie.skinkis?is_from_webapp=1&sender_device=pc">@maddie.skinkis</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/maddie.skinkis/">@maddie.skinkis</a></p>
+          <p>Discord: youdiscoveredmadz</p>
+          <p>Roblox: <a href="https://www.roblox.com/users/203464280/profile">@YouDiscoveredMadz</a></p>
+        </div>
+        
+        <div id="Photos" class="tabcontent">
+          <h1>Photos</h1>
+          <p>These photos are things that I enjoy!</p>
+          <img 
+            src="https://cloud-gblq3mc9t-hack-club-bot.vercel.app/0img_5563.jpeg"  
+            alt="Newfoundland dog with a pink hat on"  
+            width="400" height="500">
+          <img
+            src="https://cloud-lxbg7dvrv-hack-club-bot.vercel.app/0img_5437.jpeg"
+            alt="Peanut butter milkshake"
+            width="400" height="500">
+          <img
+            src="https://cloud-b6liuzyj5-hack-club-bot.vercel.app/0img_5354.jpeg"
+            alt="Little brown dog shes kinda hard to describe"
+            width="400" height="500">  
+          <img
+            src="https://cloud-3uumkbbz3-hack-club-bot.vercel.app/0img_9360.jpeg"
+            alt="Dog looking into the camera lookin funny"
+            width="450" height="350">  
+        </div>
+        
+        <div id="Other" class="tabcontent">
+          <h1>Other projects I have done!</h1>
+          <p> <a href="https://youdiscoveredmadz.github.io/my-website/">My OG website! (It looks so bad) </a></p>
+          <p> <a href="https://youdiscoveredmadz.github.io/weezer-on-car/">Weezer On Car (This one is just silly!)</a></p>
+          <p> <a href=" https://youdiscoveredmadz.github.io/Dancing-With-The-Stars-Tracker/">Dancing With The Stars Tracker</a></p>
+        </div>
+        
+    
+        
+        <script>
+        function openTab(tabName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(tabName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+           
+        </body>
+
+</html>
